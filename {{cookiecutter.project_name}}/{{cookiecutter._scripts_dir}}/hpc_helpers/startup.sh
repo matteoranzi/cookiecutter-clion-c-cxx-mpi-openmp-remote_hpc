@@ -1,7 +1,13 @@
 #!/bin/bash
 
-WORKING_DIRECTORY="/home/{{ cookiecutter.unitn_username }}/{{ cookiecutter.remote_project_path }}/{{ cookiecutter.project_name }}"
+# Get the directory of the current script
+#if bash use ${BASH_SOURCE[0]} else use ${0} (APPLE: zsh)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]:-${0}}")" && pwd)"
+source "${SCRIPT_DIR}/../../{{cookiecutter._configs_dir}}/project.env"
 
-alias lastout="${WORKING_DIRECTORY}/{{cookiecutter._scripts_dir}}/hpc_helpers/lastOutput.sh"
-alias lasterr="${WORKING_DIRECTORY}/{{cookiecutter._scripts_dir}}/hpc_helpers/lastError.sh"
-alias laststat="${WORKING_DIRECTORY}/{{cookiecutter._scripts_dir}}/hpc_helpers/lastStat.sh"
+cd "${REMOTE_WORKING_DIRECTORY}" || exit
+
+alias lastout="${REMOTE_WORKING_DIRECTORY}/{{cookiecutter._scripts_dir}}/hpc_helpers/lastOutput.sh"
+alias lasterr="${REMOTE_WORKING_DIRECTORY}/{{cookiecutter._scripts_dir}}/hpc_helpers/lastError.sh"
+alias laststat="${REMOTE_WORKING_DIRECTORY}/{{cookiecutter._scripts_dir}}/hpc_helpers/lastStat.sh"
+alias lastjobdir="source ${REMOTE_WORKING_DIRECTORY}/{{cookiecutter._scripts_dir}}/hpc_helpers/lastJobDir.sh"

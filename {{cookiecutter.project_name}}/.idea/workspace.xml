@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="BackendCodeEditorMiscSettings">
-    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
-    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
-    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
-    <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="CppGeneralOptions" type="string" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
   </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
@@ -21,17 +19,20 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="{{ cookiecutter.project_name }}" targetName="{{ cookiecutter.project_name }}" />
+      <config projectName="CLion_OpenMP_MPI" targetName="CLion_OpenMP_MPI" />
+      <config projectName="CLion_OpenMP_MPI" targetName="benchmark" />
     </generated>
   </component>
-  <component name="CMakeSettings" AUTO_RELOAD="true">
+  <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug-local" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DREMOTE_RUN=OFF" />
-      <configuration PROFILE_NAME="Debug-remote" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="{{ cookiecutter.remote_toolchain_name }}" GENERATION_OPTIONS="-DREMOTE_RUN=ON" />
+      <configuration PROFILE_NAME="Local Debug" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DREMOTE_RUN=OFF -DUSE_MPI=ON -DUSE_OPENMP=ON" />
+      <configuration PROFILE_NAME="HPC Debug" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="{{cookiecutter.remote_toolchain_name}}" GENERATION_OPTIONS="-DREMOTE_RUN=ON -DUSE_MPI=ON -DUSE_OPENMP=ON -DPRINT_DEBUG_LEVEL_GLOBAL=3" />
+      <configuration PROFILE_NAME="Local Testing" ENABLED="false" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DREMOTE_RUN=OFF -DPRINT_DEBUG_LEVEL=INFO -DUSE_MPI=ON -DUSE_OPENMP=ON" />
+      <configuration PROFILE_NAME="HPC Testing" ENABLED="false" CONFIG_NAME="Debug" TOOLCHAIN_NAME="{{cookiecutter.remote_toolchain_name}}" GENERATION_OPTIONS="-DREMOTE_RUN=ON -DPRINT_DEBUG_LEVEL=INFO -DUSE_MPI=ON -DUSE_OPENMP=ON" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f025ed3-8be1-4fd2-b8c8-6709325310dc" name="Changes" comment="" />
+    <list default="true" id="2b10b0c8-1855-4c7d-a86d-87c9c4f4f335" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,90 +41,170 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-remote" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Local Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/include/debug/print_debug.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/include/debug/print_debug.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/include/debug/unique_print_debug.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/benchmark/benchmark.c" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/src/main.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
-    <option name="majorVersion" value="2024" />
-    <option name="minorVersion" value="3.6" />
+    <option name="majorVersion" value="2025" />
+    <option name="minorVersion" value="2.3" />
     <option name="productBranch" value="Classic" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
+  &quot;associatedIndex&quot;: 2
 }</component>
-  <component name="ProjectId" id="33FDJ8xSFREtpcdag3T0nIv3ZOn" />
+  <component name="ProjectId" id="34pfBGOA0QM0p2yQ4PNnkFFUiHl" />
+  <component name="ProjectStatusUIService">{
+  &quot;uiKindId&quot;: &quot;Widget&quot;
+}</component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "CMake Application.local_run.executor": "Run",
-    "CMake Application.remote_run.executor": "Run",
+    "CMake Application.CLion_OpenMP_MPI.executor": "Run",
+    "CMake Application.HPC Run.executor": "Run",
+    "CMake Application.Local Run Debugger.executor": "Run",
+    "CMake Application.Local Run.executor": "Run",
+    "CMake Application.Remote Run.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "SHELLCHECK.PATH": "/Users/matteoranzi/Library/Application Support/JetBrains/CLion2025.2/plugins/Shell Script/shellcheck",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "",
+    "last_opened_file_path": "/Users/matteoranzi/Documents/_my-templates/COOKIECUTTER/_tests/CLion_OpenMP_MPI/configs",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pathVariables",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "web.server",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "C++"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+    </key>
+    <key name="CidrLocalAttachDebugger.recentlyUsed">
+      <recent name="com.jetbrains.cidr.cpp.execution.debugger.backend.CLionLLDBDriverConfiguration" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.remote_run">
+  <component name="RunManager" selected="CMake Application.Local Run">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="local_run" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="{{ cookiecutter.project_name }}" TARGET_NAME="{{ cookiecutter.project_name }}" CONFIG_NAME="Debug-local" RUN_PATH="$PROJECT_DIR$/{{cookiecutter._scripts_dir}}/run/local_run.sh">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="remote_run" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file:///home/{{ cookiecutter.unitn_username }}/{{ cookiecutter.remote_project_path }}/{{ cookiecutter.project_name }}/{{cookiecutter._hpc_executions_dir}}" PASS_PARENT_ENVS_2="true" PROJECT_NAME="{{ cookiecutter.project_name }}" TARGET_NAME="{{ cookiecutter.project_name }}" CONFIG_NAME="Debug-remote" RUN_PATH="../{{cookiecutter._scripts_dir}}/run/remote_run.sh">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="CMake Application.local_run" />
-      <item itemvalue="CMake Application.remote_run" />
+      <item itemvalue="CMake Application.Local Run Debugger" />
+      <item itemvalue="CMake Application.Local Run" />
+      <item itemvalue="CMake Application.HPC Run" />
     </list>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3f025ed3-8be1-4fd2-b8c8-6709325310dc" name="Changes" comment="" />
-      <created>1758903851293</created>
+      <changelist id="2b10b0c8-1855-4c7d-a86d-87c9c4f4f335" name="Changes" comment="" />
+      <created>1761915296200</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1758903851293</updated>
-      <workItem from="1758903852498" duration="995000" />
-      <workItem from="1758917555115" duration="247000" />
-      <workItem from="1758917804977" duration="11709000" />
-      <workItem from="1758972171635" duration="11067000" />
+      <updated>1761915296200</updated>
+      <workItem from="1761915297286" duration="22595000" />
+      <workItem from="1761941349330" duration="2607000" />
+      <workItem from="1762035017303" duration="15326000" />
+      <workItem from="1762091117204" duration="34293000" />
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.config" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.template" />
+  </component>
   <component name="VCPKGProject">
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/{{cookiecutter._src_dir}}/main.cpp</url>
+          <line>63</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

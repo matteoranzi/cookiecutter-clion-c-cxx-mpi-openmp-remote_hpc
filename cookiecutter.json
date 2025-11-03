@@ -1,15 +1,24 @@
 {
-    "project_name": "HelloWorld-MPI",
-    "project_description": "C application with MPI support",
+    "project_name": "HelloWorld-ParallelComputing",
+    "project_description": "C/CXX application with MPI and OpenMP support",
     "author_name": "Matteo Ranzi",
     "local_operating_system": ["MacOS", "Linux", "Windows"],
+    "enable_cxx_support": "y",
+    "c_standard": "11",
     "cxx_standard": "11",
     "unitn_username": "matteo.ranzi",
-    "remote_project_path": ["/Exercises", "/Projects", "/Benchmarks"],
+    "remote_project_path": ["/Exercises", "/Projects", "/Benchmarks", "/Testing"],
     "remote_toolchain_name": "UNITN HPC",
+    "remote_deplyoment_servername": "UNITN HPC",
 
     "_hpc_executions_dir": "HPC",
+    "_local_executions_dir": "local",
     "_src_dir": "src",
     "_scripts_dir": "scripts",
-    "_include_dir": "include"
+    "_include_dir": "include",
+    "_configs_dir": "configs",
+    "_cmake_dir": "cmake",
+    
+    
+    "_local_working_directory": "TO_BE_FILLED_BY_PRE_HOOK"
 }

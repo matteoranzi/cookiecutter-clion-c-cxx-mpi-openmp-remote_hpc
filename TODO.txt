@@ -1,7 +1,0 @@
-TODO
-
-- set shabang (currently #!/bin/zsh) in local_run.sh according to the OS on which the template is being used
-- which CMake minimum required? (in CMakeList.txt). Actually is a version supported by the CMake installed on the unitn's HPC
-- in future versions where CMake for release are created, the run scripts need to adapt to the path of the right executable (now hardcoded to the cmake-debug-*)
-- fix absolute paths in scripts to relative path to maximize compatibility/portability
-- \> CREATE A PATHS_CONFIG_FILE for all scripts, storing the path of the project -> .gitignore in case of multicollaboration -> each developer put it's own paths in this file and the main scripts read those values

@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" promptOnRemoteOverwrite="CHECK_CONTENT" createEmptyFolders="true" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" serverName="{{cookiecutter.remote_deplyoment_servername}}" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
-      <paths name="{{ cookiecutter.remote_toolchain_name }}">
+      <paths name="{{cookiecutter.remote_deplyoment_servername}}">
         <serverdata>
           <mappings>
             <mapping deploy="/{{ cookiecutter.remote_project_path }}/{{ cookiecutter.project_name }}" local="$PROJECT_DIR$" web="/" />
           </mappings>
           <excludedPaths>
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-remote" />
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-local" />
-            <excludedPath local="true" path="$PROJECT_DIR$/{{cookiecutter._scripts_dir}}/run/local_run.sh" />
+            <excludedPath local="true" path="$PROJECT_DIR$/configs/local.env" />
+            <excludedPath local="true" path="$PROJECT_DIR$/{{ cookiecutter._local_executions_dir }}/" />
+            <excludedPath local="true" path="$PROJECT_DIR$/{{ cookiecutter._scripts_dir }}/run/local_run.sh" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-local-testing" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-hpc-debug" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-local-debug" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-hpc-testing" />
+            <excludedPath local="true" path="$PROJECT_DIR$/{{ cookiecutter._configs_dir }}/local.config" />
           </excludedPaths>
         </serverdata>
       </paths>
