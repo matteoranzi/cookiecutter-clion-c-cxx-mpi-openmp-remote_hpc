@@ -95,7 +95,6 @@ void wait_for_attach_debugger(const int rank) {
 #endif
     }
 }
-{%- endif %}
 
 // =================================================================
 //  Generated with Matteo Ranzi’s CLion Project Template
