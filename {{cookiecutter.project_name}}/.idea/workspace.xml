@@ -25,10 +25,10 @@
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Local Debug" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DREMOTE_RUN=OFF -DUSE_MPI=ON -DUSE_OPENMP=ON" />
-      <configuration PROFILE_NAME="HPC Debug" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="{{cookiecutter.remote_toolchain_name}}" GENERATION_OPTIONS="-DREMOTE_RUN=ON -DUSE_MPI=ON -DUSE_OPENMP=ON -DPRINT_DEBUG_LEVEL_GLOBAL=3" />
-      <configuration PROFILE_NAME="Local Testing" ENABLED="false" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DREMOTE_RUN=OFF -DPRINT_DEBUG_LEVEL=INFO -DUSE_MPI=ON -DUSE_OPENMP=ON" />
-      <configuration PROFILE_NAME="HPC Testing" ENABLED="false" CONFIG_NAME="Debug" TOOLCHAIN_NAME="{{cookiecutter.remote_toolchain_name}}" GENERATION_OPTIONS="-DREMOTE_RUN=ON -DPRINT_DEBUG_LEVEL=INFO -DUSE_MPI=ON -DUSE_OPENMP=ON" />
+      <configuration PROFILE_NAME="Local Debug" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DREMOTE_RUN=OFF" />
+      <configuration PROFILE_NAME="HPC Debug" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="{{cookiecutter.remote_toolchain_name}}" GENERATION_OPTIONS="-DREMOTE_RUN=ON -DPRINT_DEBUG_LEVEL_GLOBAL=3" />
+      <configuration PROFILE_NAME="Local Testing" ENABLED="false" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DREMOTE_RUN=OFF -DPRINT_DEBUG_LEVEL=INFO" />
+      <configuration PROFILE_NAME="HPC Testing" ENABLED="false" CONFIG_NAME="Debug" TOOLCHAIN_NAME="{{cookiecutter.remote_toolchain_name}}" GENERATION_OPTIONS="-DREMOTE_RUN=ON -DPRINT_DEBUG_LEVEL=INFO" />
     </configurations>
   </component>
   <component name="ChangeListManager">

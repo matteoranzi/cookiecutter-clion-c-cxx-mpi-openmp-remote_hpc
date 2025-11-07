@@ -4,17 +4,25 @@
 * Description: {{ cookiecutter.project_description }}
 ***********************************************************************************************************************/
 
-
+{% if cookiecutter.enable_OpenMP == "y" -%}
 #include <omp.h>
+{%- endif %}
+{% if cookiecutter.enable_MPI == "y" -%}
 #include <mpi.h>
+{%- endif %}
+
 #include <cstdlib>
 #include <unistd.h>
 #include <cstring>
 
 #include <debug/print_debug.h>
+{% if cookiecutter.enable_MPI == "y" -%}
 #include <debug/unique_print_debug.h>
+{%- endif %}
 
+{% if cookiecutter.enable_MPI == "y" -%}
 #include <benchmark/benchmark.h>
+{%- endif %}
 
 #ifdef HPC_RUN
 #define LOGS_DIR getenv("HPC_JOB_LOGS_DIR")
@@ -26,6 +34,7 @@
 void wait_for_attach_debugger(int rank);
 
 int main(int argc, char *argv[]) {
+    {% if cookiecutter.enable_MPI == "y" -%}
     int comm_size;
     int my_rank;
     MPI_File benchmark_log_file;
@@ -35,16 +44,24 @@ int main(int argc, char *argv[]) {
 
     MPI_Comm_size(MPI_COMM_WORLD, &comm_size);
     MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
+    {%- endif %}
 
+    {% if cookiecutter.enable_MPI == "y" -%}
     wait_for_attach_debugger(my_rank);
+    {%- else -%}
+    // wait_for_attach_debugger(my_rank);
+    {% endif -%}
 
+    {% if cookiecutter.enable_MPI == "y" -%}
 //=============================================================================
     benchmark_init(my_rank, LOGS_DIR, &benchmark_log_file);
     benchmark_run(my_rank, "Void Application", [](const int rank){PRINT_DEBUG_INFO(rank, "Hello {{cookiecutter.project_name}}");}, &benchmark_log_file);
     benchmark_finalize(my_rank, &benchmark_log_file);
 //=============================================================================
 
+    
     MPI_Finalize();
+    {%- endif %}
 
     return 0;
 }
@@ -78,6 +95,7 @@ void wait_for_attach_debugger(const int rank) {
 #endif
     }
 }
+{%- endif %}
 
 // =================================================================
 //  Generated with Matteo Ranzi’s CLion Project Template

@@ -11,9 +11,9 @@ set(CMAKE_CXX_STANDARD {{cookiecutter.cxx_standard}})
 # set(CMAKE_CXX_STANDARD {{cookiecutter.cxx_standard}})
 {%- endif %}
 
-option(USE_MPI "Enable MPI support" OFF)
-option(USE_OPENMP "Enable OpenMP support" OFF)
-option(REMOTE_RUN "Configurations for remote run" OFF)
+set(USE_MPI {{ "ON" if cookiecutter.enable_MPI == "y" else "OFF" }})
+set(USE_OPENMP ON)
+option(REMOTE_RUN "Configurations for remote run" {{ "ON" if cookiecutter.enable_OpenMP == "y" else "OFF" }})
 
 
 

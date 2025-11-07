@@ -4,6 +4,8 @@
     "author_name": "Matteo Ranzi",
     "local_operating_system": ["MacOS", "Linux", "Windows"],
     "enable_cxx_support": "y",
+    "enable_MPI": "y",
+    "enable_OpenMP": "y",
     "c_standard": "11",
     "cxx_standard": "11",
     "unitn_username": "matteo.ranzi",
@@ -17,8 +19,5 @@
     "_scripts_dir": "scripts",
     "_include_dir": "include",
     "_configs_dir": "configs",
-    "_cmake_dir": "cmake",
-    
-    
-    "_local_working_directory": "TO_BE_FILLED_BY_PRE_HOOK"
+    "_cmake_dir": "cmake"
 }
